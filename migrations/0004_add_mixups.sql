@@ -43,7 +43,6 @@ CREATE TABLE IF NOT EXISTS mixup_slots (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     mixup_id UUID REFERENCES mixups(id) ON DELETE CASCADE,
     slot_id TEXT NOT NULL,
-    recipe_slug TEXT,
     order_index INT NOT NULL,
     created_at TIMESTAMPTZ DEFAULT NOW()
 );
